@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Narrow:400,700&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', serif, sans-serif;
+    /*font-family: Georgia, Times,*/
+    font-size: 20px;
+    min-height: 100vh;
+}
+/* ХЕДЕР**************/
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 100;
+    background: #000;
+}
+
+.header .logo{
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.header ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: relative;
+    right: 200px;
+}
+
+.header ul li{
+    list-style: none; /* убирает точьки между словами в Нав.Баре*/
+    margin: 0 10px;
+}
+
+.logo {
+    width: 125px ;
+}
+
+.header ul li a{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0;
+    background: #000;
+    letter-spacing: 2px;
+  }
+
+  .header ul li a.active,
+  .header ul li a:hover{
+    background: #000;  /* активная подсведка */
+    color: #ff0000;
+  }
+/*********Банер Текст*****************/
+.bannerText{
+    /*position: relative;*/
+    position: absolute;/*****************************/
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 700px;
+}
+
+.bannerText h2,.bannerText h3{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    transform-origin: left;
+    text-transform: uppercase;
+    transform: scaleX(0);
+    animation: revealTextReverse 1s ease-in-out forwards;
+}
+
+.bannerText h2{
+    font-size: 6em;
+    animation-delay: 2s;
+}
+
+.bannerText h3{
+    font-size: 3em;
+    animation-delay: 3s;
+}
+
+.bannerText h2:before,
+.bannerText h3:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    transform-origin: right;
+    animation: revealText 1s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+.bannerText h3:before{
+    animation-delay: 4s;
+}
+@keyframes revealText{
+    0%{
+        transform: scaleX(1);
+    }
+    100%{
+        transform: scaleX(0);
+    }
+}
+
+@keyframes revealTextReverse{
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.bannerText p{
+    opacity: 0;
+    font-weight: 400;
+    font-size: 1.2em;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 5s;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.bannerText a{
+    opacity: 0;
+    display: inline-block;
+    margin: 20px 0 0;
+    padding: 10px 20px;
+    background: #000;
+    color: #ff0000;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    animation: fadeInBottom 0.5s linear forwards;
+    animation-delay: 5.5s;
+}
+
+@keyframes fadeInBottom{
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.bulb{
+    opacity: 0;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 6s;
+    box-shadow: -5px 5px 20px #000,
+                -10px 10px 30px #000,
+                -20px 15px 40px #000,
+                -25px 20px 50px #000;
+}
+/*********Бан текст2 **********************/
+.imeg{
+    padding: 0;
+    margin: 100px;
+    top: 1000px;
+    position: absolute;
+    box-shadow: -5px 5px 20px #000,
+                -10px 10px 30px #000,
+                -20px 15px 40px #000,
+                -25px 20px 50px #000;
+
+    /*background-image:url(images/СТО1.jpg);
+    width: 100%;
+    height: 100%;*/
+}
+.banText2{
+    padding: 0;
+    margin: 100px;
+    top: 1000px;
+    left:1000px;
+    right: 10%;
+    position: relative;
+    max-width: 800px;
+    font-size: 1.2em;
+
+}
+/* Footer ********************/
+.footer{
+    padding: 20px;
+    margin: 0;
+    position: relative;
+    top: 1500px;
+    text-align: center;
+    background: #ddd;
+}
+
+.icons{  /*ГОРИЗОНТАЛЬНОЕ ВИРАВНИВАНИЕ*/
+    display: flex;
+    justify-content: space-between;  /* Распределенное выравнивание */
+    align-items: center;  /* Центрировать элементы в поперечной оси */
+    padding: 50px 0;
+}
+.icons .sci,.icons .controls{
+    position: relative;
+    top: 0px; /*иконки вниз сам напис. */
+    display: flex;
+}
+
+.icons .sci li{
+    list-style: none;
+    margin-right: 30px;
+}
+
+.icons .sci li img{
+    display: inline-block;
+    max-width: 24px;
+    transition: 0.5s ease-in-out;
+}
+
+.icons .sci li:hover img{
+    transform: translateY(-10px);
+}
+
+.icons .controls li{
+    list-style: none;
+    margin-left: 20px;
+    cursor: pointer;
+    filter: invert(1);
+    transition: 0.5s ease-in-out;
+}
+
+.icons .controls li:hover{
+    opacity: 0.5;
+}

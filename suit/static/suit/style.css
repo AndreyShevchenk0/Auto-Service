@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=PT+Narrow:400,700&display=swap');
-body {
+body,html {
     margin: 0;
     padding: 0;
-    font-family: 'Times New Roman', serif, sans-serif;
+    font-family: 'Times New Roman', Georgia, serif, sans-serif;
     /*font-family: Georgia, Times,*/
     font-size: 20px;
     min-height: 100vh;
+    height: 100%;
 }
+
 /* ХЕДЕР**************/
 .header{
     position: absolute;
@@ -184,11 +186,46 @@ body {
                 -20px 15px 40px #000,
                 -25px 20px 50px #000;
 }
+/****************** Паралакс ***************************/
+.parallax {
+    /* The image used */
+    /*background-image: url("img_parallax.jpg");*/
+    top: 1100px;
+    position: relative;
+    background-image: url("avtoretro5.jpg");
+
+    /* Full height */
+    height: 80%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax1 {
+    /* The image used */
+    /*background-image: url("img_parallax.jpg");*/
+    top: 1200px;
+    position: relative;
+    background-image:url( 'images/avtoretro7.jpg');
+
+    /* Full height */
+    height: 70%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /*********Бан текст2 **********************/
 .imeg{
     padding: 0;
     margin: 100px;
-    top: 1000px;
+    top: 1900px;
     position: absolute;
     box-shadow: -5px 5px 20px #000,
                 -10px 10px 30px #000,

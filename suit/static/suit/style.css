@@ -187,45 +187,13 @@ body,html {
                 -25px 20px 50px #000;
 }
 /****************** Паралакс ***************************/
-.parallax {
-    /* The image used */
-    /*background-image: url("img_parallax.jpg");*/
-    top: 1100px;
-    position: relative;
-    background-image: url("avtoretro5.jpg");
 
-    /* Full height */
-    height: 80%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.parallax1 {
-    /* The image used */
-    /*background-image: url("img_parallax.jpg");*/
-    top: 1200px;
-    position: relative;
-    background-image:url( 'images/avtoretro7.jpg');
-
-    /* Full height */
-    height: 70%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 /*********Бан текст2 **********************/
 .imeg{
     padding: 0;
     margin: 100px;
-    top: 1900px;
+    top: 1000px;
     position: absolute;
     box-shadow: -5px 5px 20px #000,
                 -10px 10px 30px #000,
@@ -252,7 +220,7 @@ body,html {
     padding: 20px;
     margin: 0;
     position: relative;
-    top: 1500px;
+    top: 1300px;
     text-align: center;
     background: #ddd;
 }
